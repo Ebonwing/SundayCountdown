@@ -36,6 +36,18 @@ img {
 .transparent {
     color: rgba(11,5,5,0.0001);
 }
+@media only screen and (orientation:portrait)
+{
+    #wrapper { display:none; }
+    #warning-message { display:block; color: white;}
+    
+    html
+    {
+        background:url("https://s3files.core77.com/blog/images/2013/11/ESB-HalloweenLightShow-1.jpg") no-repeat center center fixed;
+        background-size: cover;
+        height: 100%;
+    }       
+}
 </style>
 <header>
 <title>Sunday Drip Countdown</title>
