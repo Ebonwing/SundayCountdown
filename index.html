@@ -61,7 +61,7 @@ img {
 </body>
 <script>
 
-  var date = new Date("2024-12-4T04:00:00")
+  var date = new Date("2024-12-4 04:00:00".replace(/-/g, '/'))
   date.setUTCHours(3)
   var timer = date.getTime();
   var now = new Date().getTime();
