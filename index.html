@@ -73,6 +73,20 @@ img {
   var seconds = Math.floor((difference % (1000 * 60)) / 1000);
   document.getElementById("demo").innerHTML = '<span class="vertical-align">'+days + "d " + hours + "h "
   + minutes + "m " + seconds + "s " +'</span>';
+  var difference = timer - now;
+
+
+  var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML = '<span>'+days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s " +'</span>';
+  if (difference < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = '<span>IS IT DRIP TIME YET?</span>';
+  }
   var x = setInterval(function() {
 
   var now = new Date().getTime();
@@ -89,8 +103,7 @@ img {
   + minutes + "m " + seconds + "s " +'</span>';
   if (difference < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = '<span> + "test" + hours + "h "
-  + minutes + "m " + seconds + "s " +'</span>';;
+    document.getElementById("demo").innerHTML = '<span>IS IT DRIP TIME YET?</span>';
   }
 }, 1000);
 </script>
