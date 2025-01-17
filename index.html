@@ -87,8 +87,7 @@ img {
 
   document.getElementById("demo").innerHTML = '<span>'+days + "d " + hours + "h "
   + minutes + "m " + seconds + "s " +'</span>';
-console.log(distance)
-  if (distance < 0) {
+  if (difference < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "IS IT DRIP TIME YET?";
   }
