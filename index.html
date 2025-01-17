@@ -84,7 +84,6 @@ img {
   document.getElementById("demo").innerHTML = '<span>'+days + "d " + hours + "h "
   + minutes + "m " + seconds + "s " +'</span>';
   if (difference < 0) {
-    clearInterval(x);
     document.getElementById("demo").innerHTML = '<span>IS IT DRIP TIME YET?</span>';
   }
   var x = setInterval(function() {
